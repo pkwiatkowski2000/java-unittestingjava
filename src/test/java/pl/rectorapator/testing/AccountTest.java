@@ -2,10 +2,13 @@ package pl.rectorapator.testing;
 
 import org.junit.jupiter.api.Test;
 
-public class AccountTest {
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+class AccountTest {
 
     @Test
-    public void myTest() {
-
+    void myTest() {
+        Account newAccount = new Account();
+        assertFalse(newAccount.isActive(), "Check if new account is not active");
     }
 }
