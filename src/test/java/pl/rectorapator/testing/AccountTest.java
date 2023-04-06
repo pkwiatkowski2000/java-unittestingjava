@@ -30,7 +30,7 @@ class AccountTest {
         assertFalse(newAccount.isActive(), "Check if new account is not active");
         assertThat(newAccount.isActive(), equalTo(false)); //Hamcrest
         assertThat(newAccount.isActive(), is(false)); //Hamcrest
-        assertThat(newAccount.isActive()).isFalse();
+        assertThat(newAccount.isActive()).isFalse(); //assertJ
     }
 
     @Test
@@ -45,6 +45,7 @@ class AccountTest {
         //then
         assertTrue(newAccount.isActive());
         assertThat(newAccount.isActive(), equalTo(true)); //Hamcrest
+        assertThat(newAccount.isActive()).isTrue(); //assertJ
 
     }
 
@@ -60,6 +61,7 @@ class AccountTest {
         //then
         assertNull(address);
         assertThat(address, nullValue()); //Hamcrest
+        assertThat(address).isNull(); //assertJ
     }
 
     @Test
@@ -77,5 +79,6 @@ class AccountTest {
         assertNotNull(defaultAddress);
         assertThat(defaultAddress, is(notNullValue())); //Hamcrest
         assertThat(defaultAddress, notNullValue()); //Hamcrest
+        assertThat(defaultAddress).isNotNull(); //assertJ
     }
 }
