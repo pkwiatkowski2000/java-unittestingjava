@@ -2,17 +2,22 @@ package pl.rectorapator.testing;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
     @Test
-    void newAccountShouldNotBeActiveAfterCreation() {
+    void newlyCreatedAccountShouldNotBeActive() {
         //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
         Account newAccount = new Account();
 
         //then (asercje, pod warunkiem, gdy wykonamy jakąś operację to ma się coś stać)
         assertFalse(newAccount.isActive(), "Check if new account is not active");
+        assertThat(newAccount.isActive(), equalTo(false));
+        assertThat(newAccount.isActive(), is(false));
     }
 
     /*
