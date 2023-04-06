@@ -3,24 +3,11 @@ package pl.rectorapator.testing;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-class AccountTest {
-
-    @Test
-    void newlyCreatedAccountShouldNotBeActive() {
-        //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
-        Account newAccount = new Account();
-
-        //then (asercje, pod warunkiem, gdy wykonamy jakąś operację to ma się coś stać)
-        assertFalse(newAccount.isActive(), "Check if new account is not active");
-        assertThat(newAccount.isActive(), equalTo(false));
-        assertThat(newAccount.isActive(), is(false));
-    }
-
-    /*
+/*
     Konwencja:
 
     //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
@@ -31,6 +18,20 @@ class AccountTest {
          1.Testowanie jednej funkcjonalności, jednej ścieżki wykonania
          2.W nazwach testów unikamy sformułowań AND i OR
      */
+
+class AccountTest {
+
+    @Test
+    void newlyCreatedAccountShouldNotBeActive() {
+        //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
+        Account newAccount = new Account();
+
+        //then (asercje, pod warunkiem, gdy wykonamy jakąś operację to ma się coś stać)
+        assertFalse(newAccount.isActive(), "Check if new account is not active");
+        assertThat(newAccount.isActive(), equalTo(false)); //Hamcrest
+        assertThat(newAccount.isActive(), is(false)); //Hamcrest
+        assertThat(newAccount.isActive()).isFalse();
+    }
 
     @Test
     void AccountShouldBeActiveAfterActivation() {
@@ -43,6 +44,7 @@ class AccountTest {
 
         //then
         assertTrue(newAccount.isActive());
+        assertThat(newAccount.isActive(), equalTo(true)); //Hamcrest
 
     }
 
@@ -57,6 +59,7 @@ class AccountTest {
 
         //then
         assertNull(address);
+        assertThat(address, nullValue()); //Hamcrest
     }
 
     @Test
@@ -72,5 +75,7 @@ class AccountTest {
 
         //then
         assertNotNull(defaultAddress);
+        assertThat(defaultAddress, is(notNullValue())); //Hamcrest
+        assertThat(defaultAddress, notNullValue()); //Hamcrest
     }
 }
