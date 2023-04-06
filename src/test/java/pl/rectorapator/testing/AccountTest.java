@@ -2,8 +2,7 @@ package pl.rectorapator.testing;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
@@ -16,9 +15,16 @@ class AccountTest {
         assertFalse(newAccount.isActive(), "Check if new account is not active");
     }
 
-     /*BDD:
-            1.Testowanie jednej funkcjonalności, jednej ścieżki wykonania
-            2.W nazwach testów unikamy sformułowań AND i OR
+    /*
+    Konwencja:
+
+    //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
+    //when (operacje, które chcemy wykonać)
+    //then (asercje, pod warunkiem, gdy wykonamy jakąś operację to ma się coś stać)
+
+    BDD:
+         1.Testowanie jednej funkcjonalności, jednej ścieżki wykonania
+         2.W nazwach testów unikamy sformułowań AND i OR
      */
 
     @Test
@@ -33,5 +39,33 @@ class AccountTest {
         //then
         assertTrue(newAccount.isActive());
 
+    }
+
+    @Test
+    void newlyCreatedAccountShouldNotHaveDefaultDeliveryAddressSet() {
+
+        //given
+        Account account = new Account();
+
+        //when
+        Address address = account.getDefaultDeliveryAddress();
+
+        //then
+        assertNull(address);
+    }
+
+    @Test
+    void defaultDeliveryAddressShouldNotBeNullAfterBeingSet() {
+
+        //given
+        Address address = new Address("Krakowska", "67c");
+        Account account = new Account();
+        account.setDefaultDeliveryAddress(address);
+
+        //when
+        Address defaultAddress = account.getDefaultDeliveryAddress();
+
+        //then
+        assertNotNull(defaultAddress);
     }
 }
