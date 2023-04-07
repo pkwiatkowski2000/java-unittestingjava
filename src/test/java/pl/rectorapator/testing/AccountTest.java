@@ -1,11 +1,13 @@
 package pl.rectorapator.testing;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumingThat;
 
 /*
     Konwencja:
@@ -80,5 +82,20 @@ class AccountTest {
         assertThat(defaultAddress, is(notNullValue())); //Hamcrest
         assertThat(defaultAddress, notNullValue()); //Hamcrest
         assertThat(defaultAddress).isNotNull(); //assertJ
+    }
+
+    @RepeatedTest(3)
+    void newAccountWithNotNullAddressShouldBeActive() {
+
+        //given
+        Address address = new Address("Puławska", "46/6");
+
+        //when
+        Account account = new Account(address);
+
+        //then
+        assumingThat(address != null, () -> {
+            assertTrue(account.isActive());
+        });
     }
 }
