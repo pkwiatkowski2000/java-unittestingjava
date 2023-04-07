@@ -25,6 +25,7 @@ class AccountTest {
 
     @Test
     void newlyCreatedAccountShouldNotBeActive() {
+
         //given (wstępne założenia testu, tworzymy obiekty, ustawiamy stan początkowy, zaślepiamy zależności)
         Account newAccount = new Account();
 
@@ -37,6 +38,7 @@ class AccountTest {
 
     @Test
     void AccountShouldBeActiveAfterActivation() {
+
         //given
         Account newAccount = new Account();
         assertFalse(newAccount.isActive());
