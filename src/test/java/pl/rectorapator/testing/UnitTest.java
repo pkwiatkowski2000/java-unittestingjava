@@ -1,7 +1,7 @@
 package pl.rectorapator.testing;
-import homework.Cargo;
-import homework.Coordinates;
-import homework.Unit;
+import pl.rectorapator.homework.Cargo;
+import pl.rectorapator.homework.Coordinates;
+import pl.rectorapator.homework.Unit;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;

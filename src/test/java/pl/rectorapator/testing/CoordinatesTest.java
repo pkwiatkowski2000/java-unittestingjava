@@ -1,6 +1,6 @@
 package pl.rectorapator.testing;
 
-import homework.Coordinates;
+import pl.rectorapator.homework.Coordinates;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.*;

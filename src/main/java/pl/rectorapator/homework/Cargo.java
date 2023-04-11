@@ -1,4 +1,4 @@
-package homework;
+package pl.rectorapator.homework;
 
 import java.util.Objects;
 
