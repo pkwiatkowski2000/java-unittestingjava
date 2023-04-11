@@ -1,6 +1,7 @@
 package pl.rectorapator.testing;
 
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -21,6 +22,7 @@ import static org.junit.jupiter.api.Assumptions.assumingThat;
          2.W nazwach testów unikamy sformułowań AND i OR
      */
 
+@Tag("fries")
 class AccountTest {
 
     @Test
