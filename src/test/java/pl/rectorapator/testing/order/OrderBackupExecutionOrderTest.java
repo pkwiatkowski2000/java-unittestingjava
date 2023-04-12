@@ -1,6 +1,8 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.order;
 
 import org.junit.jupiter.api.Test;
+import pl.rectorapator.testing.order.Order;
+import pl.rectorapator.testing.order.OrderBackup;
 
 import java.io.IOException;
 

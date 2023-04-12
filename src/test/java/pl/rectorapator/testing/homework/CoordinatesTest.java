@@ -1,4 +1,4 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.homework;
 
 import pl.rectorapator.homework.Coordinates;
 import org.junit.jupiter.api.Test;

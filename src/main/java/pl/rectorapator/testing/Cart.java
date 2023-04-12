@@ -1,5 +1,7 @@
 package pl.rectorapator.testing;
 
+import pl.rectorapator.testing.order.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 

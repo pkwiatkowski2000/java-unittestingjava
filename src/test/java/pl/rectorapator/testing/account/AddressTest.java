@@ -1,4 +1,4 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.account;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

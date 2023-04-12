@@ -1,4 +1,4 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.homework;
 import pl.rectorapator.homework.Cargo;
 import pl.rectorapator.homework.Coordinates;
 import pl.rectorapator.homework.Unit;

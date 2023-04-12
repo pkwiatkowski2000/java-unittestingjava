@@ -1,4 +1,4 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.account;
 
 public class Address {
 
