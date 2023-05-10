@@ -1,6 +1,6 @@
 package pl.rectorapator.testing.cart;
 
-import pl.rectorapator.testing.order.OrderStatus
+import pl.rectorapator.testing.order.OrderStatus;
 
 class CartService {
 
