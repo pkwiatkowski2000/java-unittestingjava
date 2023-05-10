@@ -1,5 +1,6 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.cart;
 
+import pl.rectorapator.testing.Meal;
 import pl.rectorapator.testing.order.Order;
 
 import java.util.ArrayList;
