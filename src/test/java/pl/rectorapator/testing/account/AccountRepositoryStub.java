@@ -22,5 +22,4 @@ public class AccountRepositoryStub implements AccountRepository {
     public List<String> getByName(String name) {
         return null;
     }
-
 }
