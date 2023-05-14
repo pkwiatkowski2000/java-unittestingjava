@@ -2,9 +2,7 @@ package pl.rectorapator.testing.order;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
-import pl.rectorapator.testing.Meal;
-import pl.rectorapator.testing.order.Order;
-import pl.rectorapator.testing.order.OrderBackup;
+import pl.rectorapator.testing.meal.Meal;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

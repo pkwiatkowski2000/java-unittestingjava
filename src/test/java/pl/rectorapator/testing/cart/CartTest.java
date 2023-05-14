@@ -3,8 +3,7 @@ package pl.rectorapator.testing.cart;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pl.rectorapator.testing.Meal;
-import pl.rectorapator.testing.cart.Cart;
+import pl.rectorapator.testing.meal.Meal;
 import pl.rectorapator.testing.order.Order;
 
 import java.time.Duration;

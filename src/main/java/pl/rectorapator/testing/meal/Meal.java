@@ -1,4 +1,4 @@
-package pl.rectorapator.testing;
+package pl.rectorapator.testing.meal;
 
 import java.util.Objects;
 
@@ -71,6 +71,10 @@ public class Meal {
 
     public int sumPrice() {
         return getPrice() * getQuantity();
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
 

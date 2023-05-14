@@ -1,8 +1,7 @@
-package pl.rectorapator.testing.order;
+package pl.rectorapator.testing.meal;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.rectorapator.testing.Meal;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.not;
 
-public class MealRepositoryTest {
+class MealRepositoryTest {
 
     private MealRepository mealRepository = new MealRepository();
 

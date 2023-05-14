@@ -1,6 +1,6 @@
 package pl.rectorapator.testing.order;
 
-import pl.rectorapator.testing.Meal;
+import pl.rectorapator.testing.meal.Meal;
 
 import java.util.ArrayList;
 import java.util.List;
